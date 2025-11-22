@@ -6,20 +6,20 @@ public class Main {
 		
 		Customer c = new Customer();
 		
-		Product laptop = new Product (80000, 1500);
-		Product usbCable = new Product (500, 50);
+		Product efootballPlaque = new Product (80000, 1500);
+		Product xboxController = new Product (500, 50);
 		
 		Service repair = new Service(3000);
 		
-		c.transact(new Purchase(laptop, 1));
-		c.transact(new Purchase(usbCable, 1));
+		c.transact(new Purchase(efootballPlaque, 1));
+		c.transact(new Purchase(xboxController, 1));
 		c.transact(new Purchase(repair, 1));
 		
-		c.transact(new Refund(500, "Returned USB calble"));
+		c.transact(new Refund(500, "Returned xboxController"));
 		
 		System.out.println("Customer total (in pennies): " + c.getTotal());
-		System.out.println("Laptop delivery: " + laptop.calculateDelivery());
-		System.out.println("USB Cable delivery: " + usbCable.calculateDelivery());
+		System.out.println("Efootball Plaque delivery: " + efootballPlaque.calculateDelivery());
+		System.out.println("Xbox Controller delivery: " + xboxController.calculateDelivery());
 	}
 
 }
