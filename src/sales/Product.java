@@ -1,12 +1,28 @@
 package sales;
+/**
+ * the product class represents a real item the customer buys which would have a price and weight
+ * products also have delivery costs based on their weight
+ */
 
 public class Product implements Saleable{ //product provides the getPrice method from that interface 
 	private int price;
 	private int weight;
 	
+	
+	/**
+	 * to create a new product
+	 * @param price which is the price of the product in pennies
+	 * @param weight which is the weight of the product in grams
+	 */
+	
 	public Product (int price, int weight) {
 		this.price = price;
 		this.weight = weight;
+		
+		/**
+		 * returns the price of the product
+		 * @return the price in pennies
+		 */
 	}
 	
 	//because the method comes from saleable.
@@ -14,6 +30,11 @@ public class Product implements Saleable{ //product provides the getPrice method
 	public int getPrice() {
 		return price;
 	}
+	
+	/**
+	 * calculates the delivery cost based on the product's weight
+	 * @return the delivery cost in pennies
+	 */
 	
 	public int calculateDelivery() {
 		//if the weight is less than 100g then the delivery is free
