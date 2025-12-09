@@ -17,9 +17,9 @@ public class Main {
 		
 		c.transact(new Refund(500, "Returned xboxController"));
 		
-		System.out.println("Customer total (in pennies): " + c.getTotal());
-		System.out.println("Efootball Plaque delivery: " + efootballPlaque.calculateDelivery());
-		System.out.println("Xbox Controller delivery: " + xboxController.calculateDelivery());
+		System.out.println("Customer total: £" + (c.getTotal()/100.0)); //change the value from pennies to pound
+		System.out.println("Efootball Plaque delivery: £" + efootballPlaque.calculateDelivery()/100.0);
+		System.out.println("Xbox Controller delivery: £" + xboxController.calculateDelivery()/100.0);
 		
 
 	}
