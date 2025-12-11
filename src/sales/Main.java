@@ -27,7 +27,9 @@ public class Main {
 		System.out.println("Items Purchased: Repair Service (£" + (repair.getPrice()/100.0) + ")");
 		//System.out.println("Items Refunded: Xbox Controller (-£" + (500/100.0) + ")");
 		
+		//used maths absolutes because refund values are -ve and i don't want "-£-5.00" to be printed
 		System.out.println("Items Refunded: xBox Controller (-£" + Math.abs(refundController.getValue())/100.0 + ")");
+		
 		System.out.println("\n----- DELIVERY COSTS -----");
 		System.out.println("eFootball Plaque delivery: £" + efootballPlaque.calculateDelivery()/100.0);
 		System.out.println("Xbox Controller delivery: £" + xboxController.calculateDelivery()/100.0);
